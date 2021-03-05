@@ -1,8 +1,11 @@
 module.exports = {
-  globals: {
-    MyGlobal: true,
+  root: true,
+  parser: "@typescript-eslint/parser",
+  parserOptions: {
+    ecmaVersion: 10,
+    sourceType: "module",
+    project: "./tsconfig.json",
   },
-  rules: {
-    semi: [2, "always"],
-  },
+  plugins: ["@typescript-eslint"],
+  extends: ["airbnb-typescript"],
 };
